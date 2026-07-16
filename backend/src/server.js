@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     "https://financial-analysis-kpmg.vercel.app",
+    "https://financial-analysis-kpmg-cd83gtgys-ahmedullah01s-projects.vercel.app",
     "https://kpmg-financial-analysis-production.up.railway.app",
     "http://localhost:5173" // Good to keep for local dev
   ]
