@@ -12,13 +12,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: [
-    "https://financial-analysis-kpmg.vercel.app",
-    "https://financial-analysis-kpmg-cd83gtgys-ahmedullah01s-projects.vercel.app",
-    "https://financial-analysis-kpmg-git-main-ahmedullah01s-projects.vercel.app",
-    "https://kpmg-financial-analysis-production.up.railway.app",
-    "http://localhost:5173" // Good to keep for local dev
-  ]
+  origin: '*', // Allow all origins — fixes Vercel preview URL rotation
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
